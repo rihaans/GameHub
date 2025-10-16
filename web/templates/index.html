@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GameHub - Web UI</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      #log {
+        white-space: pre-wrap;
+        background: #f7f7f7;
+        padding: 10px;
+        height: 300px;
+        overflow: auto;
+      }
+      .controls {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>GameHub Web UI</h1>
+    <div>
+      <label>Player name: <input id="playerName" value="Player1" /></label>
+      <button id="connectBtn">Connect</button>
+    </div>
+
+    <div class="controls">
+      <label
+        >Game type:
+        <select id="gameType">
+          <option value="trivia">Trivia</option>
+          <option value="word_chain">Word Chain</option>
+          <option value="rock_paper_scissors">Rock Paper Scissors</option>
+        </select></label
+      >
+      <button id="createBtn">Create Room</button>
+      <input id="roomId" placeholder="room id" />
+      <button id="joinBtn">Join Room</button>
+      <button id="readyBtn">Toggle Ready</button>
+    </div>
+
+    <div class="controls">
+      <label
+        >Action:
+        <input id="actionName" placeholder="action (answer/move/choose)"
+      /></label>
+      <input
+        id="actionData"
+        placeholder='data (JSON) e.g. {"answer":"Paris"}'
+      />
+      <button id="sendActionBtn">Send Action</button>
+    </div>
+
+    <h3>Log</h3>
+    <div id="log"></div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
